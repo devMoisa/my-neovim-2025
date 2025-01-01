@@ -1,0 +1,7 @@
+{
+  "dracula.nvim": { "branch": "main", "commit": "515acae4fd294fcefa5b15237a333c2606e958d1" },
+  "lazy.nvim": { "branch": "main", "commit": "7e6c863bc7563efbdd757a310d17ebc95166cef3" },
+  "nvim-treesitter": { "branch": "master", "commit": "e947d35bbf919ea88a24c21cb8afa4621e3cf547" },
+  "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" },
+  "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" }
+}
