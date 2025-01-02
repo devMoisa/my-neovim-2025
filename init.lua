@@ -1,6 +1,4 @@
-
 require("nvim-options")
-
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -10,7 +8,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   if vim.v.shell_error ~= 0 then
     vim.api.nvim_echo({
       { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out, "WarningMsg" },
+      { out,                            "WarningMsg" },
       { "\nPress any key to exit..." },
     }, true, {})
     vim.fn.getchar()
@@ -19,10 +17,12 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 
 vim.opt.rtp:prepend(lazypath)
+
 require("lazy").setup("plugins")
 require("keymaps")
+require("snippets")
 
-
-
-
-
+local custom = require("custom-plugin")
+vim.keymap.set("n", "<leader>9", function()
+  custom.show_line_error()
+end, { desc = "Mostrar erro da linha atual" })
