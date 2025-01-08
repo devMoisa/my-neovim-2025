@@ -15,6 +15,11 @@ return {
         window = {
           mappings = {
             ["v"] = "open_vsplit", -- <--- Mapeamento para abrir em split vertical
+            ["l"] = "open",  -- Abrir nó com 'l'
+            ["h"] = "close_node", -- Fechar nó com 'h' (uma prática comum)
+            ["<CR>"] = "open", -- Também abrir com Enter (opcional)
+            ["j"] = "next",  -- Mover para baixo
+            ["k"] = "prev",  -- Mover para cima
           },
         },
       },

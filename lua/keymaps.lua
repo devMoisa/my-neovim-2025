@@ -1,6 +1,8 @@
--- Defina o <leader> como espaço, caso não tenha feito ainda
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+-- Save file (lowercase w)
+vim.keymap.set("n", "<leader>w", ":w<CR>", { noremap = true, silent = true, desc = "Salvar arquivo" })
+
+-- Save file (uppercase W)
+vim.keymap.set("n", "<leader>W", ":w<CR>", { noremap = true, silent = true, desc = "Salvar arquivo (maiúsculo)" })
 
 -- Importa a biblioteca do Telescope
 local builtin = require("telescope.builtin")
